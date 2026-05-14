@@ -15,4 +15,9 @@ public class TrainDataRepository implements TrainRepository {
     public void add(Train train) {
         trainMemLocalDataSource.save(train);
     }
+
+    @Override
+    public void delete(String trainId) {
+        trainMemLocalDataSource.delete(trainId);
+    }
 }
