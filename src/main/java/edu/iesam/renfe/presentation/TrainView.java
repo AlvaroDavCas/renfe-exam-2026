@@ -21,4 +21,10 @@ public class TrainView {
         GetTrainUseCase getTrainUseCase = new GetTrainUseCase(new TrainDataRepository(TrainMemLocalDataSource.newInstance()));
         System.out.println(getTrainUseCase);
     }
+
+    public static void function1() {
+        TrainView.get();
+        TrainView.add();
+        TrainView.get();
+    }
 }
