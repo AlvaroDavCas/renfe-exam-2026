@@ -1,9 +1,13 @@
 package edu.iesam.renfe.data; //cambiar por la ruta correcta
 
+import edu.iesam.renfe.domain.Train;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class TrainMemLocalDataSource {
+
+    private static TrainMemLocalDataSource instance = null;
 
     private ArrayList<Train> storage = new ArrayList<>();
 
@@ -17,5 +21,12 @@ public class TrainMemLocalDataSource {
 
     public void delete(String trainId) {
         storage.removeIf(train -> Objects.equals(train.getId(), trainId));
+    }
+
+    public static TrainMemLocalDataSource newInstance() {
+        if(instance == null) {
+            instance = new TrainMemLocalDataSource();
+        }
+        return instance;
     }
 }
