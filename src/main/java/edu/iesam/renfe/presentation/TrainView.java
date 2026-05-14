@@ -2,10 +2,7 @@ package edu.iesam.renfe.presentation;
 
 import edu.iesam.renfe.data.TrainDataRepository;
 import edu.iesam.renfe.data.TrainMemLocalDataSource;
-import edu.iesam.renfe.domain.AddTrainUseCase;
-import edu.iesam.renfe.domain.DeleteTrainUseCase;
-import edu.iesam.renfe.domain.Train;
-import edu.iesam.renfe.domain.TrainRepository;
+import edu.iesam.renfe.domain.*;
 
 public class TrainView {
 
@@ -18,5 +15,10 @@ public class TrainView {
     public static void delete() {
         DeleteTrainUseCase deleteTrainUseCase = new DeleteTrainUseCase(new TrainDataRepository(TrainMemLocalDataSource.newInstance()));
         deleteTrainUseCase.execute("MD5-001");
+    }
+
+    public static void get() {
+        GetTrainUseCase getTrainUseCase = new GetTrainUseCase(new TrainDataRepository(TrainMemLocalDataSource.newInstance()));
+        System.out.println(getTrainUseCase);
     }
 }
