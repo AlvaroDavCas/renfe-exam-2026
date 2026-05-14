@@ -4,6 +4,6 @@ import edu.iesam.renfe.presentation.TrainView;
 
 public class Main {
     public static void main(String[] args) {
-        TrainView.function1();
+        TrainView.function2();
     }
 }

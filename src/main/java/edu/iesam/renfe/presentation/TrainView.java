@@ -27,4 +27,8 @@ public class TrainView {
         TrainView.add();
         TrainView.get();
     }
+
+    public static void function2() {
+        TrainView.get();
+    }
 }
