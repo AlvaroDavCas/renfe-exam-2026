@@ -31,4 +31,10 @@ public class TrainView {
     public static void function2() {
         TrainView.get();
     }
+
+    public static void function3() {
+        TrainView.get();
+        TrainView.delete();
+        TrainView.get();
+    }
 }
